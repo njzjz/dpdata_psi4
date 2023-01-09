@@ -33,7 +33,7 @@ def read_psi4(fn: str) -> Tuple[str, np.ndarray, float, np.ndarray]:
             elif line.startswith("    Total Energy ="):
                 energy = float(line.split()[-1])
     symbols = np.array(symbols)
-    forces = np.array(forces)
+    forces = -np.array(forces)
     coord = np.array(coord)
     assert coord.shape == forces.shape
 
