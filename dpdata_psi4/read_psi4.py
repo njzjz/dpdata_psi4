@@ -14,7 +14,7 @@ def read_psi4(fn: str) -> Tuple[str, np.ndarray, float, np.ndarray]:
                 if not len(s):
                     flag = 0
                 else:
-                    symbols.append(s[0])
+                    symbols.append(s[0].capitalize())
                     coord.append([float(s[1]), float(s[2]), float(s[3])])
             elif flag == 7:
                 s = line.split()
